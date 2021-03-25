@@ -1,3 +1,8 @@
 h1{
     font-size: 4.5em;
 }
+
+#about-container{
+    margin:auto;
+    text-align:center;
+}
