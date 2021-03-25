@@ -1,25 +1,39 @@
-import logo from './logo.svg';
+import React, {Component} from 'react';
+import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import './App.css';
+import About from './About/About.js';
+import Sender from './Sender/Sender.js';
+import Receiver from './Receiver/Receiver.js';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    return (
+        <Router>
+          <div>
+            <ul>
+              <li>
+                <Link className="link" to= '/'>Home</Link>
+              </li>
+              <li>
+                <Link className="link" to="/sender">Write</Link>
+              </li>
+              <li>
+                <Link className="link" to="/receiver">Read</Link>
+              </li>
+          </ul>
 
+          <Switch>
+            <Route path ='/receiver'>
+                <Receiver />
+            </ Route>
+            <Route path = '/sender'>
+                <Sender />
+            </ Route>
+            <Route path = '/'>
+                <About />
+            </ Route>
+          </Switch>
+        </div>
+      </Router>
+    );
+}
 export default App;

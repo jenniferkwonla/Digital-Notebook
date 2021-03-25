@@ -1,5 +1,50 @@
-.App {
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited{
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: grey;
+  text-decoration: none;
+}
+
+a:active {
+  color: white;
+  text-decoration: none;
+}
+
+ul li{
+  text-align:center;
+  margin:auto;
+  display:inline;
+}
+
+li{
+  padding-right: 40px;
+}
+
+body {
   text-align: center;
+  background-color: black;
+}
+
+h1 {
+  color: #fdf084
+}
+
+h2{
+  color: white;
+  padding-top: 30px;
 }
 
 .App-logo {
